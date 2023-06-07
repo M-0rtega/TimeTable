@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-sm-12">
+      <form (ngSubmit)="onSubmit()" #materiaForm="ngForm">
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="cve_materia">Clave Materia</label>
+            <input type="text" class="form-control" required [(ngModel)]="materia.cve_materia" name="cve_materia">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="descripcion">Descripcion</label>
+            <input type="text" class="form-control" required [(ngModel)]="materia.descripcion" name="descripcion">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="ht">Horas teóricas</label>   
+              <input type="number" class="form-control" required [(ngModel)]="materia.ht" name="ht">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="hp">Horas prácticas</label>
+              <input type="number" class="form-control" required [(ngModel)]="materia.hp" name="hp">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="credito">Credito</label>
+              <input type="text" class="form-control" required [(ngModel)]="materia.credito" name="credito">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="reticula">Retícula</label>
+              <input type="text" class="form-control" required [(ngModel)]="materia.reticula" name="reticula">
+            </div>
+          </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary" [disabled]="!materiaForm.form.valid">Submit</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>

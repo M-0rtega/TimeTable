@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <form class="form-inline">
+          <fieldset class="form-group col-sm-11"></fieldset>
+          <fieldset class="form-group col-sm-1">
+            <a class="btn btn-primary" [routerLink]="['/materias/agregar']">+ </a>
+          </fieldset>
+        </form>
+        <br>
+        <table class="table table-striped">
+          <thead>
+            <tr class="row">
+              <th class="col-sm-2"> Clave materia </th>
+              <th class="col-sm-2"> Descripción </th>
+              <th class="col-sm-2"> Ht </th>
+              <th class="col-sm-2"> Hp </th>
+              <th class="col-sm-2"> Creditos </th>
+              <!--th class="col-sm-2"> Retícula </th-->
+              <th class="col-sm-2"> Acción </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let materia of materias | async" class="row">
+              <td class="col-sm-2"><i>{{ materia.cve_materia }}</i></td>
+              <td class="col-sm-2"><i>{{ materia.descripcion }}</i></td>
+              <td class="col-sm-2"><i>{{ materia.ht }}</i></td>
+              <td class="col-sm-2"><i>{{ materia.hp }}</i></td>
+              <td class="col-sm-2"><i>{{ materia.credito }}</i></td>
+              <td class="col-sm-1">
+                <fieldset class="form-group col-sm-1">
+                  <a class="btn btn-info" [routerLink]="['/materias/editar/', materia.id_materia]">Editar</a>
+                </fieldset>
+              </td>
+              <td class="col-sm-1">
+                <fieldset class="form-group col-sm-1">
+                  <a class="btn btn-danger" (click)="borrarMateria(materia.id_materia)">Borrar</a>
+                </fieldset>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

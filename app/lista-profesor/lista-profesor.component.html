@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <form class="form-inline">
+          <fieldset class="form-group col-sm-11"></fieldset>
+          <fieldset class="form-group col-sm-1">
+            <a class="btn btn-primary" [routerLink]="['/profesores/agregar']">+ </a>
+          </fieldset>
+        </form>
+        <br>
+        <table class="table table-striped">
+          <thead>
+            <tr class="row">
+              <th class="col-sm-2"> Número empleado </th>
+              <th class="col-sm-2"> Nombre </th>
+              <th class="col-sm-2"> Apellido materno </th>
+              <th class="col-sm-2"> Apellido paterno</th>
+              <th class="col-sm-2"> Acciones </th>
+              <!--th class="col-sm-4"> Fecha de nacimiento</th-->
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let profesor of profesores | async" class="row">
+              <td class="col-sm-2"><i> {{profesor.numero_emp }}</i></td>
+              <td class="col-sm-2"><i> {{ profesor.nombre }}</i></td>
+              <td class="col-sm-2"><i> {{ profesor.ap_paterno }}</i></td>
+              <td class="col-sm-2"><i> {{ profesor.ap_materno }}</i></td>
+              <td class="col-sm-1">
+                <fieldset class="form-group col-sm-1">
+                  <a class="btn btn-info" [routerLink]="['/profesores/editar/', profesor.id_profesor]">Editar</a>
+                </fieldset>
+              </td>
+              <td class="col-sm-1">
+                <fieldset class="form-group col-sm-1">
+                  <a class="btn btn-danger" (click)="borrarProfesor(profesor.id_profesor)">Borrar</a>
+                </fieldset>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

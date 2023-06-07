@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-sm-12">
+      <form (ngSubmit)="onSubmit()" #profesorForm="ngForm">
+        <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="numero_emp">Número empleado</label>
+              <input type="text" class="form-control" required [(ngModel)]="profesor.numero_emp" name="numero_emp">
+            </div>
+          </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="nombre">Nombre</label>
+            <input type="text" class="form-control" required [(ngModel)]="profesor.nombre" name="nombre">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="ap_paterno">Apellido Paterno</label>
+            <input type="text" class="form-control" required [(ngModel)]="profesor.ap_paterno" name="ap_paterno">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="ap_materno">Apellido Materno</label>
+              <input type="text" class="form-control" required [(ngModel)]="profesor.ap_materno" name="ap_materno">
+            </div>
+        </fieldset>
+        <!--fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="fecha_nac">Fecha nacimiento</label>
+            <input type="date" class="form-control" required [(ngModel)]="profesor.fecha_nac" name="fecha_nac">
+          </div>
+      </fieldset-->
+        <fieldset class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary" [disabled]="!profesorForm.form.valid">Submit</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>

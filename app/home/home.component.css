@@ -1,0 +1,10 @@
+
+
+    body{
+        background-image: url('../../assets/img/fondo.jpg');
+        background-color: #0A0E21;
+        background-position: center;
+        background-size: cover;
+        background-repeat:no-repeat ;
+        max-width: 100%;
+    }
