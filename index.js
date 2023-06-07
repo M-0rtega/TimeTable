@@ -36,7 +36,7 @@ conexion.connect(error => {
 app.get('/', (req, res) => {
     res.send('API')
 })
-
+/*
 app.get('/profesores', (req, res) => {
     const query = `SELECT * FROM profesores;`
     conexion.query(query, (error, resultado) => {
@@ -102,5 +102,76 @@ app.delete('/profesores/borrar/:numero_emp', (req, res) => {
         if(error) console.error(error.message)
 
         res.json(`Se eliminó correctamente el profesor`)
+    })
+})
+*/
+
+app.get('/materias', (req, res) => {
+    const query = `SELECT * FROM materias;`
+    conexion.query(query, (error, resultado) => {
+        if(error) return console.error(error.message)
+
+        if(resultado.length > 0) {
+            res.json(resultado)
+            
+        } else {
+            res.json(`No hay registros`)
+        }
+    })
+})
+
+app.get('/materias/:id', (req, res) => {
+    const { id } = req.params
+
+    const query = `SELECT * FROM materias WHERE id_materia=${id};`
+    conexion.query(query, (error, resultado) => {
+        if(error) return console.error(error.message)
+
+        if(resultado.length > 0) {
+            res.json(resultado)
+        } else {
+            res.json(`No hay registros`)
+        }
+    })
+})
+
+app.post('/materias/agregar', (req, res) => {
+    const materia = {
+        cve_materia: req.body.cve_materia,
+        descripcion: req.body.descripcion,
+        ht: req.body.ht,
+        hp: req.body.hp,
+        credito: req.body.credito,
+        reticula: req.body.reticula
+    }
+
+    const query = `INSERT INTO materias SET ?`
+    conexion.query(query, materia, (error) => {
+        if(error) return console.error(error.message)
+
+        res.json(`Se insertó correctamente el materia`)
+    })
+})
+
+app.put('/materias/actualizar/:id', (req, res) => {
+    const { id } = req.params
+    const { cve_materia, descripcion, ht, hp, credito, reticula  } = req.body
+
+    const query = `UPDATE materias SET cve_materia='${cve_materia}', descripcion='${descripcion}', ht='${ht}' , hp='${hp}' , credito='${credito}', reticula='${reticula}' WHERE id_materia='${id}';`
+    conexion.query(query, (error) => {
+        if(error) return console.error(error.message)
+
+        res.json(`Se actualizó correctamente la materia`)
+    })
+})
+
+app.delete('/materias/borrar/:id', (req, res) => {
+    const { id } = req.params
+
+    const query = `DELETE FROM materias WHERE id_materia=${id};`
+    conexion.query(query, (error) => {
+        if(error) console.error(error.message)
+
+        res.json(`Se eliminó correctamente la materia`)
     })
 })
