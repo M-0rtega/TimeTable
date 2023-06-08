@@ -1,1 +1,112 @@
-<p>lista-horarios works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Horario</th>
+        <th scope="col">Lunes</th>
+        <th scope="col">Martes</th>
+        <th scope="col">Miercoles</th>
+        <th scope="col">Jueves</th>
+        <th scope="col">Viernes</th>
+      </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngIf="(materias | async) as materiaList; ">
+            <tr>
+              <th scope="row">8:00</th>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br> {{ profesorList[0].nombre + " " +  profesorList[0].ap_paterno + " " +  profesorList[0].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br> {{ profesorList[0].nombre + " " +  profesorList[0].ap_paterno + " " +  profesorList[0].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br> {{ profesorList[0].nombre + " " +  profesorList[0].ap_paterno + " " +  profesorList[0].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br> {{ profesorList[0].nombre + " " +  profesorList[0].ap_paterno + " " +  profesorList[0].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br> {{ profesorList[0].nombre + " " +  profesorList[0].ap_paterno + " " +  profesorList[0].ap_materno}} </td>
+            </tr>
+          </ng-container>
+
+          <ng-container *ngIf="(materias | async) as materiaList">
+            <tr>
+              <th scope="row">9:00</th>
+              <td>{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br>LCE</td>
+              <td>{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br>LCE</td>
+              <td>{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br>LCE</td>
+              <td>{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br>LCE</td>
+              <td>{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br>LCE</td>
+            </tr>
+          </ng-container>
+      <tr>
+        <th scope="row">10:00</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">11:00</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">12:00</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">13:00</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">14:00</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">15:00</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">16:00</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">17:00</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">18:00</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">19:00</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">20:00</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>

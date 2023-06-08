@@ -11,7 +11,7 @@ import { Route, Router, ActivatedRoute, ParamMap, Params } from '@angular/router
 export class EditarProfesorComponent implements OnInit {
 
   id = ''
-  profesor = new ProfesorModel("","","","","");
+  profesor = new ProfesorModel("", "", "", "", "", 0, 0);
 
   constructor(
     private profesorService: ProfesorService,

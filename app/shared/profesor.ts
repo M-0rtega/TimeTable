@@ -5,6 +5,8 @@ export class ProfesorModel{
         public nombre: string,
         public ap_paterno: string,
         public ap_materno:string,
+        public hora_semana: number,
+        public prioridad: number
         //public fecha_nac: Date
     ){
 

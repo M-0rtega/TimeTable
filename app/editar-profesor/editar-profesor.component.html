@@ -25,6 +25,18 @@
               <input type="text" class="form-control" required [(ngModel)]="profesor.ap_materno" name="ap_materno">
             </div>
         </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="hora_semana">Horas por semana</label>
+            <input type="number" class="form-control" required [(ngModel)]="profesor.hora_semana" name="hora_semana">
+          </div>
+      </fieldset>
+      <fieldset class="form-group">
+        <div class="col-sm-12">
+          <label class="control-label" for="prioridad">Prioridad</label>
+          <input type="number" class="form-control" required [(ngModel)]="profesor.prioridad" name="prioridad">
+        </div>
+    </fieldset>
         <!--fieldset class="form-group">
           <div class="col-sm-12">
             <label class="control-label" for="fecha_nac">Fecha nacimiento</label>
