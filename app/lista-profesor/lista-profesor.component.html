@@ -8,43 +8,44 @@
           </fieldset>
         </form>
         <br>
-        <table class="table table-striped">
-          <thead>
-            <tr class="row">
-              <th class="col-sm-1"> Número empleado </th>
-              <th class="col-sm-1"> Nombre </th>
-              <th class="col-sm-1"> Apellido materno </th>
-              <th class="col-sm-1"> Apellido paterno</th>
-              <th class="col-sm-1"> Horas por semana </th>
-              <th class="col-sm-1"> Prioridad </th>
-              <th class="col-sm-2"> Acciones </th>
-              <!--th class="col-sm-4"> Fecha de nacimiento</th
-              hora_semana
-              prioridad
-              -->
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let profesor of profesores | async" class="row">
-              <td class="col-sm-1"><i> {{ profesor.numero_emp }}</i></td>
-              <td class="col-sm-1"><i> {{ profesor.nombre }}</i></td>
-              <td class="col-sm-1"><i> {{ profesor.ap_paterno }}</i></td>
-              <td class="col-sm-1"><i> {{ profesor.ap_materno }}</i></td>
-              <td class="col-sm-1"><i> {{ profesor.hora_semana }}</i></td>
-              <td class="col-sm-1"><i> {{ profesor.prioridad }}</i></td>
-              <td class="col-sm-1">
-                <fieldset class="form-group col-sm-1">
-                  <a class="btn btn-info" [routerLink]="['/profesores/editar/', profesor.id_profesor]">Editar</a>
-                </fieldset>
-              </td>
-              <td class="col-sm-1">
-                <fieldset class="form-group col-sm-1">
-                  <a class="btn btn-danger" (click)="borrarProfesor(profesor.id_profesor)">Borrar</a>
-                </fieldset>
-              </td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
   </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr class="row">
+        <th class="col-sm-1"> Número empleado </th>
+        <th class="col-sm-1"> Nombre </th>
+        <th class="col-sm-1"> Apellido materno </th>
+        <th class="col-sm-1"> Apellido paterno</th>
+        <th class="col-sm-1"> Horas por semana </th>
+        <th class="col-sm-1"> Prioridad </th>
+        <th class="col-sm-2"> Acciones </th>
+        <!--th class="col-sm-4"> Fecha de nacimiento</th
+        hora_semana
+        prioridad
+        -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let profesor of profesores | async" class="row">
+        <td class="col-sm-1"><i> {{ profesor.numero_emp }}</i></td>
+        <td class="col-sm-1"><i> {{ profesor.nombre }}</i></td>
+        <td class="col-sm-1"><i> {{ profesor.ap_paterno }}</i></td>
+        <td class="col-sm-1"><i> {{ profesor.ap_materno }}</i></td>
+        <td class="col-sm-1"><i> {{ profesor.hora_semana }}</i></td>
+        <td class="col-sm-1"><i> {{ profesor.prioridad }}</i></td>
+        <td class="col-sm-1">
+          <fieldset class="form-group col-sm-1">
+            <a class="btn btn-info" [routerLink]="['/profesores/editar/', profesor.id_profesor]">Editar</a>
+          </fieldset>
+        </td>
+        <td class="col-sm-1">
+          <fieldset class="form-group col-sm-1">
+            <a class="btn btn-danger" (click)="borrarProfesor(profesor.id_profesor)">Borrar</a>
+          </fieldset>
+        </td>
+      </tr>
+    </tbody>
+  </table>

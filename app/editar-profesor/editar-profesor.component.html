@@ -1,53 +1,55 @@
-<div class="row">
-    <div class="col-sm-12">
-      <form (ngSubmit)="onSubmit()" #profesorForm="ngForm">
-        <fieldset class="form-group">
+<div class="container rounded" style="width: 700px;" id="principal">
+  <div class="row-fluid" >
+      <div class="col-sm-12">
+        <form (ngSubmit)="onSubmit()" #profesorForm="ngForm">
+          <fieldset class="form-group">
+              <div class="col-sm-12">
+                <label class="control-label m-2" for="numero_emp" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Número Empleado:</label>
+                <input type="text" class="form-control" required [(ngModel)]="profesor.numero_emp" name="numero_emp">
+              </div>
+            </fieldset>
+          <fieldset class="form-group">
             <div class="col-sm-12">
-              <label class="control-label" for="numero_emp">Número empleado</label>
-              <input type="text" class="form-control" required [(ngModel)]="profesor.numero_emp" name="numero_emp">
+              <label class="control-label m-2" for="nombre" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Nombre:</label>
+              <input type="text" class="form-control" required [(ngModel)]="profesor.nombre" name="nombre">
             </div>
           </fieldset>
-        <fieldset class="form-group">
-          <div class="col-sm-12">
-            <label class="control-label" for="nombre">Nombre</label>
-            <input type="text" class="form-control" required [(ngModel)]="profesor.nombre" name="nombre">
-          </div>
-        </fieldset>
-        <fieldset class="form-group">
-          <div class="col-sm-12">
-            <label class="control-label" for="ap_paterno">Apellido Paterno</label>
-            <input type="text" class="form-control" required [(ngModel)]="profesor.ap_paterno" name="ap_paterno">
-          </div>
-        </fieldset>
-        <fieldset class="form-group">
+          <fieldset class="form-group">
             <div class="col-sm-12">
-              <label class="control-label" for="ap_materno">Apellido Materno</label>
-              <input type="text" class="form-control" required [(ngModel)]="profesor.ap_materno" name="ap_materno">
+              <label class="control-label m-2" for="ap_paterno" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Apellido Paterno:</label>
+              <input type="text" class="form-control" required [(ngModel)]="profesor.ap_paterno" name="ap_paterno">
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+              <div class="col-sm-12">
+                <label class="control-label m-2" for="ap_materno" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Apellido Materno:</label>
+                <input type="text" class="form-control" required [(ngModel)]="profesor.ap_materno" name="ap_materno">
+              </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label m-2" for="hora_semana" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Horas por semana:</label>
+              <input type="number" class="form-control" required [(ngModel)]="profesor.hora_semana" name="hora_semana">
             </div>
         </fieldset>
         <fieldset class="form-group">
           <div class="col-sm-12">
-            <label class="control-label" for="hora_semana">Horas por semana</label>
-            <input type="number" class="form-control" required [(ngModel)]="profesor.hora_semana" name="hora_semana">
+            <label class="control-label m-2" for="prioridad" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Prioridad:</label>
+            <input type="number" class="form-control" required [(ngModel)]="profesor.prioridad" name="prioridad">
           </div>
       </fieldset>
-      <fieldset class="form-group">
-        <div class="col-sm-12">
-          <label class="control-label" for="prioridad">Prioridad</label>
-          <input type="number" class="form-control" required [(ngModel)]="profesor.prioridad" name="prioridad">
-        </div>
-    </fieldset>
-        <!--fieldset class="form-group">
-          <div class="col-sm-12">
-            <label class="control-label" for="fecha_nac">Fecha nacimiento</label>
-            <input type="date" class="form-control" required [(ngModel)]="profesor.fecha_nac" name="fecha_nac">
-          </div>
-      </fieldset-->
-        <fieldset class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-primary" [disabled]="!profesorForm.form.valid">Submit</button>
-          </div>
-        </fieldset>
-      </form>
+          <!--fieldset class="form-group">
+            <div class="col-sm-12">
+              <label class="control-label" for="fecha_nac">Fecha nacimiento</label>
+              <input type="date" class="form-control" required [(ngModel)]="profesor.fecha_nac" name="fecha_nac">
+            </div>
+        </fieldset-->
+          <fieldset class="form-group-fluid text-center">
+            <div class="col-sm-offset-2-fluid ">
+              <button type="submit" class="btn btn-primary m-4 bg-dark" [disabled]="!profesorForm.form.valid">Submit</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </div>
   </div>

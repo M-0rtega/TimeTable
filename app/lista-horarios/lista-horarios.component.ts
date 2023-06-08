@@ -14,6 +14,8 @@ export class ListaHorariosComponent {
 
   materias: Observable<MateriaModel[]> | undefined;
   profesores: Observable<ProfesorModel[]> | undefined;
+  arrMat = this.generateRandomNumberArray(50, 1, 25);
+  arrProf = this.generateRandomNumberArray(20, 1, 20);
 
   constructor(private materiaService: MateriaService, private profesorService: ProfesorService) { }
 
@@ -22,4 +24,20 @@ export class ListaHorariosComponent {
       this.profesores = this.profesorService.obtenerProfesores();
   }
 
+  generateRandomNumberArray(length: number, min: number, max: number): number[] {
+    const randomNumbers: number[] = [];
+  
+    for (let i = 0; i < length; i++) {
+      const arrMat = Math.floor(Math.random() * (max - min + 1)) + min;
+      randomNumbers.push(arrMat);
+    }
+  
+    return randomNumbers;
+  }
+
+  generar(){
+    this.arrMat = this.generateRandomNumberArray(50, 1, 25);
+    this.arrProf = this.generateRandomNumberArray(20, 1, 20);  
+  }
+  
 }

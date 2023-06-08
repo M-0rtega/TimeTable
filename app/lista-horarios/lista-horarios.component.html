@@ -1,4 +1,9 @@
-<table class="table">
+<div class="clase">
+  <button class="btn btn-danger" (click)="generar()">Generar</button>
+</div>
+
+<div class="container">
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">Horario</th>
@@ -13,100 +18,135 @@
         <ng-container *ngIf="(materias | async) as materiaList; ">
             <tr>
               <th scope="row">8:00</th>
-              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br> {{ profesorList[0].nombre + " " +  profesorList[0].ap_paterno + " " +  profesorList[0].ap_materno}} </td>
-              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br> {{ profesorList[0].nombre + " " +  profesorList[0].ap_paterno + " " +  profesorList[0].ap_materno}} </td>
-              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br> {{ profesorList[0].nombre + " " +  profesorList[0].ap_paterno + " " +  profesorList[0].ap_materno}} </td>
-              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br> {{ profesorList[0].nombre + " " +  profesorList[0].ap_paterno + " " +  profesorList[0].ap_materno}} </td>
-              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br> {{ profesorList[0].nombre + " " +  profesorList[0].ap_paterno + " " +  profesorList[0].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[0]].cve_materia }}<br> {{ materiaList[arrMat[0]].descripcion }} <br> {{ profesorList[arrProf[0]].nombre + " " +  profesorList[arrProf[0]].ap_paterno + " " +  profesorList[arrProf[0]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[0]].cve_materia }}<br> {{ materiaList[arrMat[0]].descripcion }} <br> {{ profesorList[arrProf[0]].nombre + " " +  profesorList[arrProf[0]].ap_paterno + " " +  profesorList[arrProf[0]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[0]].cve_materia }}<br> {{ materiaList[arrMat[0]].descripcion }} <br> {{ profesorList[arrProf[0]].nombre + " " +  profesorList[arrProf[0]].ap_paterno + " " +  profesorList[arrProf[0]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[0]].cve_materia }}<br> {{ materiaList[arrMat[0]].descripcion }} <br> {{ profesorList[arrProf[0]].nombre + " " +  profesorList[arrProf[0]].ap_paterno + " " +  profesorList[arrProf[0]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[0]].cve_materia }}<br> {{ materiaList[arrMat[0]].descripcion }} <br> {{ profesorList[arrProf[0]].nombre + " " +  profesorList[arrProf[0]].ap_paterno + " " +  profesorList[arrProf[0]].ap_materno}} </td>
             </tr>
           </ng-container>
 
           <ng-container *ngIf="(materias | async) as materiaList">
             <tr>
               <th scope="row">9:00</th>
-              <td>{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br>LCE</td>
-              <td>{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br>LCE</td>
-              <td>{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br>LCE</td>
-              <td>{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br>LCE</td>
-              <td>{{ materiaList[0].cve_materia }}<br> {{ materiaList[0].descripcion }} <br>LCE</td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[1]].cve_materia }}<br> {{ materiaList[arrMat[1]].descripcion }} <br> {{ profesorList[arrProf[1]].nombre + " " +  profesorList[arrProf[1]].ap_paterno + " " +  profesorList[arrProf[1]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[1]].cve_materia }}<br> {{ materiaList[arrMat[1]].descripcion }} <br> {{ profesorList[arrProf[1]].nombre + " " +  profesorList[arrProf[1]].ap_paterno + " " +  profesorList[arrProf[1]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[1]].cve_materia }}<br> {{ materiaList[arrMat[1]].descripcion }} <br> {{ profesorList[arrProf[1]].nombre + " " +  profesorList[arrProf[1]].ap_paterno + " " +  profesorList[arrProf[1]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[1]].cve_materia }}<br> {{ materiaList[arrMat[1]].descripcion }} <br> {{ profesorList[arrProf[1]].nombre + " " +  profesorList[arrProf[1]].ap_paterno + " " +  profesorList[arrProf[1]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[1]].cve_materia }}<br> {{ materiaList[arrMat[1]].descripcion }} <br> {{ profesorList[arrProf[1]].nombre + " " +  profesorList[arrProf[1]].ap_paterno + " " +  profesorList[arrProf[1]].ap_materno}} </td>
             </tr>
           </ng-container>
-      <tr>
-        <th scope="row">10:00</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">11:00</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">12:00</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">13:00</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">14:00</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">15:00</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">16:00</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">17:00</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">18:00</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">19:00</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">20:00</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        <td></td>
-        <td></td>
-      </tr>
+      <ng-container *ngIf="(materias | async) as materiaList">
+            <tr>
+              <th scope="row">10:00</th>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[2]].cve_materia }}<br> {{ materiaList[arrMat[2]].descripcion }} <br> {{ profesorList[arrProf[2]].nombre + " " +  profesorList[arrProf[2]].ap_paterno + " " +  profesorList[arrProf[2]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[2]].cve_materia }}<br> {{ materiaList[arrMat[2]].descripcion }} <br> {{ profesorList[arrProf[2]].nombre + " " +  profesorList[arrProf[2]].ap_paterno + " " +  profesorList[arrProf[2]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[2]].cve_materia }}<br> {{ materiaList[arrMat[2]].descripcion }} <br> {{ profesorList[arrProf[2]].nombre + " " +  profesorList[arrProf[2]].ap_paterno + " " +  profesorList[arrProf[2]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[2]].cve_materia }}<br> {{ materiaList[arrMat[2]].descripcion }} <br> {{ profesorList[arrProf[2]].nombre + " " +  profesorList[arrProf[2]].ap_paterno + " " +  profesorList[arrProf[2]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[2]].cve_materia }}<br> {{ materiaList[arrMat[2]].descripcion }} <br> {{ profesorList[arrProf[2]].nombre + " " +  profesorList[arrProf[2]].ap_paterno + " " +  profesorList[arrProf[2]].ap_materno}} </td>
+            </tr>
+          </ng-container>
+          <ng-container *ngIf="(materias | async) as materiaList">
+            <tr>
+              <th scope="row">11:00</th>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[3]].cve_materia }}<br> {{ materiaList[arrMat[3]].descripcion }} <br> {{ profesorList[arrProf[3]].nombre + " " +  profesorList[arrProf[3]].ap_paterno + " " +  profesorList[arrProf[3]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[3]].cve_materia }}<br> {{ materiaList[arrMat[3]].descripcion }} <br> {{ profesorList[arrProf[3]].nombre + " " +  profesorList[arrProf[3]].ap_paterno + " " +  profesorList[arrProf[3]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[3]].cve_materia }}<br> {{ materiaList[arrMat[3]].descripcion }} <br> {{ profesorList[arrProf[3]].nombre + " " +  profesorList[arrProf[3]].ap_paterno + " " +  profesorList[arrProf[3]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[3]].cve_materia }}<br> {{ materiaList[arrMat[3]].descripcion }} <br> {{ profesorList[arrProf[3]].nombre + " " +  profesorList[arrProf[3]].ap_paterno + " " +  profesorList[arrProf[3]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[3]].cve_materia }}<br> {{ materiaList[arrMat[3]].descripcion }} <br> {{ profesorList[arrProf[3]].nombre + " " +  profesorList[arrProf[3]].ap_paterno + " " +  profesorList[arrProf[3]].ap_materno}} </td>
+            </tr>
+          </ng-container>
+          <ng-container *ngIf="(materias | async) as materiaList">
+            <tr>
+              <th scope="row">12:00</th>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[4]].cve_materia }}<br> {{ materiaList[arrMat[4]].descripcion }} <br> {{ profesorList[arrProf[4]].nombre + " " +  profesorList[arrProf[4]].ap_paterno + " " +  profesorList[arrProf[4]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[4]].cve_materia }}<br> {{ materiaList[arrMat[4]].descripcion }} <br> {{ profesorList[arrProf[4]].nombre + " " +  profesorList[arrProf[4]].ap_paterno + " " +  profesorList[arrProf[4]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[4]].cve_materia }}<br> {{ materiaList[arrMat[4]].descripcion }} <br> {{ profesorList[arrProf[4]].nombre + " " +  profesorList[arrProf[4]].ap_paterno + " " +  profesorList[arrProf[4]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[4]].cve_materia }}<br> {{ materiaList[arrMat[4]].descripcion }} <br> {{ profesorList[arrProf[4]].nombre + " " +  profesorList[arrProf[4]].ap_paterno + " " +  profesorList[arrProf[4]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[4]].cve_materia }}<br> {{ materiaList[arrMat[4]].descripcion }} <br> {{ profesorList[arrProf[4]].nombre + " " +  profesorList[arrProf[4]].ap_paterno + " " +  profesorList[arrProf[4]].ap_materno}} </td>
+            </tr>
+          </ng-container>
+          <ng-container *ngIf="(materias | async) as materiaList">
+            <tr>
+              <th scope="row">13:00</th>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[5]].cve_materia }}<br> {{ materiaList[arrMat[5]].descripcion }} <br> {{ profesorList[arrProf[5]].nombre + " " +  profesorList[arrProf[5]].ap_paterno + " " +  profesorList[arrProf[5]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[5]].cve_materia }}<br> {{ materiaList[arrMat[5]].descripcion }} <br> {{ profesorList[arrProf[5]].nombre + " " +  profesorList[arrProf[5]].ap_paterno + " " +  profesorList[arrProf[5]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[5]].cve_materia }}<br> {{ materiaList[arrMat[5]].descripcion }} <br> {{ profesorList[arrProf[5]].nombre + " " +  profesorList[arrProf[5]].ap_paterno + " " +  profesorList[arrProf[5]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[5]].cve_materia }}<br> {{ materiaList[arrMat[5]].descripcion }} <br> {{ profesorList[arrProf[5]].nombre + " " +  profesorList[arrProf[5]].ap_paterno + " " +  profesorList[arrProf[5]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[5]].cve_materia }}<br> {{ materiaList[arrMat[5]].descripcion }} <br> {{ profesorList[arrProf[5]].nombre + " " +  profesorList[arrProf[5]].ap_paterno + " " +  profesorList[arrProf[5]].ap_materno}} </td>
+            </tr>
+          </ng-container>
+          <ng-container *ngIf="(materias | async) as materiaList">
+            <tr>
+              <th scope="row">14:00</th>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[6]].cve_materia }}<br> {{ materiaList[arrMat[6]].descripcion }} <br> {{ profesorList[arrProf[6]].nombre + " " +  profesorList[arrProf[6]].ap_paterno + " " +  profesorList[arrProf[6]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[6]].cve_materia }}<br> {{ materiaList[arrMat[6]].descripcion }} <br> {{ profesorList[arrProf[6]].nombre + " " +  profesorList[arrProf[6]].ap_paterno + " " +  profesorList[arrProf[6]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[6]].cve_materia }}<br> {{ materiaList[arrMat[6]].descripcion }} <br> {{ profesorList[arrProf[6]].nombre + " " +  profesorList[arrProf[6]].ap_paterno + " " +  profesorList[arrProf[6]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[6]].cve_materia }}<br> {{ materiaList[arrMat[6]].descripcion }} <br> {{ profesorList[arrProf[6]].nombre + " " +  profesorList[arrProf[6]].ap_paterno + " " +  profesorList[arrProf[6]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[6]].cve_materia }}<br> {{ materiaList[arrMat[6]].descripcion }} <br> {{ profesorList[arrProf[6]].nombre + " " +  profesorList[arrProf[6]].ap_paterno + " " +  profesorList[arrProf[6]].ap_materno}} </td>
+            </tr>
+          </ng-container>
+          <ng-container *ngIf="(materias | async) as materiaList">
+            <tr>
+              <th scope="row">15:00</th>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[7]].cve_materia }}<br> {{ materiaList[arrMat[7]].descripcion }} <br> {{ profesorList[arrProf[7]].nombre + " " +  profesorList[arrProf[7]].ap_paterno + " " +  profesorList[arrProf[7]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[7]].cve_materia }}<br> {{ materiaList[arrMat[7]].descripcion }} <br> {{ profesorList[arrProf[7]].nombre + " " +  profesorList[arrProf[7]].ap_paterno + " " +  profesorList[arrProf[7]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[7]].cve_materia }}<br> {{ materiaList[arrMat[7]].descripcion }} <br> {{ profesorList[arrProf[7]].nombre + " " +  profesorList[arrProf[7]].ap_paterno + " " +  profesorList[arrProf[7]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[7]].cve_materia }}<br> {{ materiaList[arrMat[7]].descripcion }} <br> {{ profesorList[arrProf[7]].nombre + " " +  profesorList[arrProf[7]].ap_paterno + " " +  profesorList[arrProf[7]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[7]].cve_materia }}<br> {{ materiaList[arrMat[7]].descripcion }} <br> {{ profesorList[arrProf[7]].nombre + " " +  profesorList[arrProf[7]].ap_paterno + " " +  profesorList[arrProf[7]].ap_materno}} </td>
+            </tr>
+          </ng-container>
+          <ng-container *ngIf="(materias | async) as materiaList">
+            <tr>
+              <th scope="row">16:00</th>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[8]].cve_materia }}<br> {{ materiaList[arrMat[8]].descripcion }} <br> {{ profesorList[arrProf[8]].nombre + " " +  profesorList[arrProf[8]].ap_paterno + " " +  profesorList[arrProf[8]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[8]].cve_materia }}<br> {{ materiaList[arrMat[8]].descripcion }} <br> {{ profesorList[arrProf[8]].nombre + " " +  profesorList[arrProf[8]].ap_paterno + " " +  profesorList[arrProf[8]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[8]].cve_materia }}<br> {{ materiaList[arrMat[8]].descripcion }} <br> {{ profesorList[arrProf[8]].nombre + " " +  profesorList[arrProf[8]].ap_paterno + " " +  profesorList[arrProf[8]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[8]].cve_materia }}<br> {{ materiaList[arrMat[8]].descripcion }} <br> {{ profesorList[arrProf[8]].nombre + " " +  profesorList[arrProf[8]].ap_paterno + " " +  profesorList[arrProf[8]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[8]].cve_materia }}<br> {{ materiaList[arrMat[8]].descripcion }} <br> {{ profesorList[arrProf[8]].nombre + " " +  profesorList[arrProf[8]].ap_paterno + " " +  profesorList[arrProf[8]].ap_materno}} </td>
+            </tr>
+          </ng-container>
+          <ng-container *ngIf="(materias | async) as materiaList">
+            <tr>
+              <th scope="row">17:00</th>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[9]].cve_materia }}<br> {{ materiaList[arrMat[9]].descripcion }} <br> {{ profesorList[arrProf[9]].nombre + " " +  profesorList[arrProf[9]].ap_paterno + " " +  profesorList[arrProf[9]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[9]].cve_materia }}<br> {{ materiaList[arrMat[9]].descripcion }} <br> {{ profesorList[arrProf[9]].nombre + " " +  profesorList[arrProf[9]].ap_paterno + " " +  profesorList[arrProf[9]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[9]].cve_materia }}<br> {{ materiaList[arrMat[9]].descripcion }} <br> {{ profesorList[arrProf[9]].nombre + " " +  profesorList[arrProf[9]].ap_paterno + " " +  profesorList[arrProf[9]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[9]].cve_materia }}<br> {{ materiaList[arrMat[9]].descripcion }} <br> {{ profesorList[arrProf[9]].nombre + " " +  profesorList[arrProf[9]].ap_paterno + " " +  profesorList[arrProf[9]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[9]].cve_materia }}<br> {{ materiaList[arrMat[9]].descripcion }} <br> {{ profesorList[arrProf[9]].nombre + " " +  profesorList[arrProf[9]].ap_paterno + " " +  profesorList[arrProf[9]].ap_materno}} </td>
+            </tr>
+          </ng-container>
+          <ng-container *ngIf="(materias | async) as materiaList">
+            <tr>
+              <th scope="row">18:00</th>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[10]].cve_materia }}<br> {{ materiaList[arrMat[10]].descripcion }} <br> {{ profesorList[arrProf[10]].nombre + " " +  profesorList[arrProf[10]].ap_paterno + " " +  profesorList[arrProf[10]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[10]].cve_materia }}<br> {{ materiaList[arrMat[10]].descripcion }} <br> {{ profesorList[arrProf[10]].nombre + " " +  profesorList[arrProf[10]].ap_paterno + " " +  profesorList[arrProf[10]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[10]].cve_materia }}<br> {{ materiaList[arrMat[10]].descripcion }} <br> {{ profesorList[arrProf[10]].nombre + " " +  profesorList[arrProf[10]].ap_paterno + " " +  profesorList[arrProf[10]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[10]].cve_materia }}<br> {{ materiaList[arrMat[10]].descripcion }} <br> {{ profesorList[arrProf[10]].nombre + " " +  profesorList[arrProf[10]].ap_paterno + " " +  profesorList[arrProf[10]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[10]].cve_materia }}<br> {{ materiaList[arrMat[10]].descripcion }} <br> {{ profesorList[arrProf[10]].nombre + " " +  profesorList[arrProf[10]].ap_paterno + " " +  profesorList[arrProf[10]].ap_materno}} </td>
+            </tr>
+          </ng-container>
+          <ng-container *ngIf="(materias | async) as materiaList">
+            <tr>
+              <th scope="row">19:00</th>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[11]].cve_materia }}<br> {{ materiaList[arrMat[11]].descripcion }} <br> {{ profesorList[arrProf[11]].nombre + " " +  profesorList[arrProf[11]].ap_paterno + " " +  profesorList[arrProf[11]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[11]].cve_materia }}<br> {{ materiaList[arrMat[11]].descripcion }} <br> {{ profesorList[arrProf[11]].nombre + " " +  profesorList[arrProf[11]].ap_paterno + " " +  profesorList[arrProf[11]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[11]].cve_materia }}<br> {{ materiaList[arrMat[11]].descripcion }} <br> {{ profesorList[arrProf[11]].nombre + " " +  profesorList[arrProf[11]].ap_paterno + " " +  profesorList[arrProf[11]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[11]].cve_materia }}<br> {{ materiaList[arrMat[11]].descripcion }} <br> {{ profesorList[arrProf[11]].nombre + " " +  profesorList[arrProf[11]].ap_paterno + " " +  profesorList[arrProf[11]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[11]].cve_materia }}<br> {{ materiaList[arrMat[11]].descripcion }} <br> {{ profesorList[arrProf[11]].nombre + " " +  profesorList[arrProf[11]].ap_paterno + " " +  profesorList[arrProf[11]].ap_materno}} </td>
+            </tr>
+          </ng-container>
+          <ng-container *ngIf="(materias | async) as materiaList">
+            <tr>
+              <th scope="row">20:00</th>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[12]].cve_materia }}<br> {{ materiaList[arrMat[12]].descripcion }} <br> {{ profesorList[arrProf[12]].nombre + " " +  profesorList[arrProf[12]].ap_paterno + " " +  profesorList[arrProf[12]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[12]].cve_materia }}<br> {{ materiaList[arrMat[12]].descripcion }} <br> {{ profesorList[arrProf[12]].nombre + " " +  profesorList[arrProf[12]].ap_paterno + " " +  profesorList[arrProf[12]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[12]].cve_materia }}<br> {{ materiaList[arrMat[12]].descripcion }} <br> {{ profesorList[arrProf[12]].nombre + " " +  profesorList[arrProf[12]].ap_paterno + " " +  profesorList[arrProf[12]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[12]].cve_materia }}<br> {{ materiaList[arrMat[12]].descripcion }} <br> {{ profesorList[arrProf[12]].nombre + " " +  profesorList[arrProf[12]].ap_paterno + " " +  profesorList[arrProf[12]].ap_materno}} </td>
+              <td *ngIf="(profesores | async) as profesorList">{{ materiaList[arrMat[12]].cve_materia }}<br> {{ materiaList[arrMat[12]].descripcion }} <br> {{ profesorList[arrProf[12]].nombre + " " +  profesorList[arrProf[12]].ap_paterno + " " +  profesorList[arrProf[12]].ap_materno}} </td>
+            </tr>
+          </ng-container>
     </tbody>
   </table>
+
+</div>

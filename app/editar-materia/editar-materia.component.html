@@ -1,47 +1,49 @@
-<div class="row">
-    <div class="col-sm-12">
-      <form (ngSubmit)="onSubmit()" #materiaForm="ngForm">
-        <fieldset class="form-group">
-          <div class="col-sm-12">
-            <label class="control-label" for="cve_materia">Clave Materia</label>
-            <input type="text" class="form-control" required [(ngModel)]="materia.cve_materia" name="cve_materia">
-          </div>
-        </fieldset>
-        <fieldset class="form-group">
-          <div class="col-sm-12">
-            <label class="control-label" for="descripcion">Descripcion</label>
-            <input type="text" class="form-control" required [(ngModel)]="materia.descripcion" name="descripcion">
-          </div>
-        </fieldset>
-        <fieldset class="form-group">
+<div class="container rounded" style="width: 700px;" id="principal">
+  <div class="row-fluid">
+      <div class="col-sm-12">
+        <form (ngSubmit)="onSubmit()" #materiaForm="ngForm">
+          <fieldset class="form-group">
             <div class="col-sm-12">
-              <label class="control-label" for="ht">Horas teóricas</label>   
-              <input type="number" class="form-control" required [(ngModel)]="materia.ht" name="ht">
+              <label class="control-label m-2" for="cve_materia" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Clave Materia:</label>
+              <input type="text" class="form-control" required [(ngModel)]="materia.cve_materia" name="cve_materia">
             </div>
           </fieldset>
           <fieldset class="form-group">
             <div class="col-sm-12">
-              <label class="control-label" for="hp">Horas prácticas</label>
-              <input type="number" class="form-control" required [(ngModel)]="materia.hp" name="hp">
+              <label class="control-label m-2" for="descripcion" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Descripcion:</label>
+              <input type="text" class="form-control" required [(ngModel)]="materia.descripcion" name="descripcion">
             </div>
           </fieldset>
           <fieldset class="form-group">
-            <div class="col-sm-12">
-              <label class="control-label" for="credito">Credito</label>
-              <input type="text" class="form-control" required [(ngModel)]="materia.credito" name="credito">
+              <div class="col-sm-12">
+                <label class="control-label m-2" for="ht" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Horas teóricas:</label>   
+                <input type="number" class="form-control" required [(ngModel)]="materia.ht" name="ht">
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="col-sm-12">
+                <label class="control-label m-2" for="hp" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Horas prácticas:</label>
+                <input type="number" class="form-control" required [(ngModel)]="materia.hp" name="hp">
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="col-sm-12">
+                <label class="control-label m-2" for="credito" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Credito:</label>
+                <input type="text" class="form-control" required [(ngModel)]="materia.credito" name="credito">
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="col-sm-12">
+                <label class="control-label m-2" for="reticula" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Retícula:</label>
+                <input type="text" class="form-control" required [(ngModel)]="materia.reticula" name="reticula">
+              </div>
+            </fieldset>
+          <fieldset class="form-group-fluid text-center">
+            <div class="col-sm-offset-2-fluid">
+              <button type="submit" class="btn btn-primary m-4 bg-dark" [disabled]="!materiaForm.form.valid">Submit</button>
             </div>
           </fieldset>
-          <fieldset class="form-group">
-            <div class="col-sm-12">
-              <label class="control-label" for="reticula">Retícula</label>
-              <input type="text" class="form-control" required [(ngModel)]="materia.reticula" name="reticula">
-            </div>
-          </fieldset>
-        <fieldset class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-primary" [disabled]="!materiaForm.form.valid">Submit</button>
-          </div>
-        </fieldset>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
